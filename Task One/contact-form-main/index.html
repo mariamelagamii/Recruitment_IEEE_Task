@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Contact form</title>
+</head>
+<body>
+  <div class="alert-box" id="alertBox">
+    <div class="title">
+          <img src="assets/images/icon-success-check.svg" alt="">
+          <h3>Message Sent!</h3>
+    </div>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+  <form onsubmit="event.preventDefault();validateForm();">
+    <h1>Contact Us</h1>
+    <p>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="Name"/>
+      <span id="name-error" class="error"></span>
+    </p>
+    <p>
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" name="phone" />
+      <span id="phone-error" class="error"></span>
+    </p>
+    <p>
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender">
+        <option value="">
+          Please select one
+        </option>
+        <option value="male">
+          Male
+        </option>
+        <option value="female">
+          Female
+        </option>
+      </select>
+      <span id="gender-error" class="error"></span>
+    </p>
+    <p>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="Password" />
+      <span id="password-error" class="error"></span>
+    </p>
+    <p>
+      <label for="confirmPassword">Confirm password</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" />
+      <span id="confirmPassword-error" class="error"></span>
+    </p>
+    <p>
+      <input type="checkbox" id="newsletter" name="newsletter" />
+      <label for="newsletter">I want to subscribe to your newslater</label>
+      <span id="newsletter-error" class="error"></span>
+    </p>
+    <p>
+      <input type="submit" value="Submit" name="Submit" />
+    </p>
+  </form>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

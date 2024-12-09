@@ -1,0 +1,124 @@
+:root {
+    --Greenlighter: hsl(148, 38%, 91%);
+    --Greenmedium: hsl(169, 82%, 27%);
+    --Red: hsl(0, 66%, 54%);
+    --White: hsl(0, 0%, 100%);
+    --Greymedium: hsl(186, 15%, 59%);
+    --Greydarker: hsl(187, 24%, 22%);
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Karla", sans-serif;
+    background-color: var(--Greenlighter);
+}
+
+h1 {
+    margin: 0;
+    color: var(--Greydarker);
+}
+
+form {
+    max-width: 500px; 
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--White);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label{
+    color: var(--Greydarker);
+}
+label::after{
+    content: "\002A";
+    padding-left: 6px;
+    color: var(--Greenmedium);
+}
+
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid var(--Greymedium);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: all 5ms linear;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+select:hover{
+    cursor: pointer;
+    border: 1px solid var(--Greenmedium);
+}
+input:focus, select:focus {
+    border: 1px solid var(--Greenmedium); 
+    outline: none;
+    border-radius: 4px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid var(--Greymedium);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: var(--White);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type="submit"],
+input[type="checkbox"] {
+    background-color: var(--Greenmedium);
+    color: var(--White);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    width: 100%;
+}
+input[type="submit"]:hover{
+    background-color: var(--Greydarker);
+}
+
+.error{
+    color: var(--Red);
+    font-size: 14px;
+    margin-top: 5px;
+}
+.alert-box {
+    display: none;
+    background-color: var(--Greydarker);
+    color: var(--Greenlighter);
+    border: 1px solid var(--Greenlighter);
+    border-radius: 5px;
+    padding: 15px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    position: fixed;
+    top: 10px;
+    z-index: 1000;
+}
+.alert-box .title {
+    display: flex;
+}
+.alert-box .title h3 {
+    margin-left: 10px;
+}

@@ -1,0 +1,10 @@
+setTimeout: 
+		is used to schedule the execution of a function after a specified delay.
+		Single execution
+		One-time delays
+
+setInterval: 
+		Is used to repeatedly execute a function at a fixed interval. It is suitable for scenarios where you need to perform a task in regular intervals until explicitly stopped.
+		Repeatedly executions
+		Recurring tasks
+		
